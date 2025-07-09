@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capabilities | Mayo Plastics Manufacturing Inc.</title>
+    <meta name="description" content="Explore our core capabilities: precision injection molding, custom extrusion, recyclable materials, and OEM fulfillment services.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.0/dist/cdn.min.js"></script>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-cogs logo-icon"></i> MAYO PLASTICS
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="capabilities.html" class="active">Capabilities</a></li>
+                    <li><a href="industries.html">Industries</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="cta-button header-cta">Request a Quote</a>
+            <button id="menu-toggle" class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    <div class="mobile-nav">
+         <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="capabilities.html" class="active">Capabilities</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="cta-button">Request a Quote</a>
+    </div>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Our Engineering Capabilities</h1>
+                <p>Advanced processes and materials to bring your most demanding projects to life.</p>
+            </div>
+        </section>
+
+        <section class="page-section capabilities-grid">
+            <div class="container">
+                <div class="capabilities-layout">
+                    <div class="capability-card-large" x-data="{ open: false }">
+                        <img src="images/9.jpg" alt="Precision injection molding">
+                        <div class="capability-content">
+                            <div class="capability-visible" @click="open = !open">
+                                <div>
+                                    <i class="fas fa-atom capability-icon"></i>
+                                    <h3>Injection Molding</h3>
+                                </div>
+                                <i class="fas fa-chevron-down toggle-arrow" :class="{ 'rotate-180': open }"></i>
+                            </div>
+                            <div class="capability-hidden" x-show="open" x-collapse>
+                                <p>We excel in creating highly complex and detailed parts through precision injection molding. Our state-of-the-art machinery handles a wide range of thermoplastic polymers, ensuring consistent quality and tight tolerances for high-volume production runs.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="capability-card-large" x-data="{ open: false }">
+                        <img src="images/10.jpg" alt="Custom plastic extrusion line">
+                        <div class="capability-content">
+                            <div class="capability-visible" @click="open = !open">
+                                <div>
+                                    <i class="fas fa-ruler-combined capability-icon"></i>
+                                    <h3>Custom Extrusion</h3>
+                                </div>
+                                <i class="fas fa-chevron-down toggle-arrow" :class="{ 'rotate-180': open }"></i>
+                            </div>
+                            <div class="capability-hidden" x-show="open" x-collapse>
+                                <p>Our custom extrusion services produce continuous shapes like tubing, piping, and seals. We work with you to develop custom dies, allowing for unique profiles tailored perfectly to your application, from simple designs to complex co-extrusions.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="capability-card-large" x-data="{ open: false }">
+                        <img src="images/11.jpg" alt="Sustainable and recyclable plastics">
+                        <div class="capability-content">
+                            <div class="capability-visible" @click="open = !open">
+                                <div>
+                                    <i class="fas fa-recycle capability-icon"></i>
+                                    <h3>Recyclable Materials</h3>
+                                </div>
+                                <i class="fas fa-chevron-down toggle-arrow" :class="{ 'rotate-180': open }"></i>
+                            </div>
+                            <div class="capability-hidden" x-show="open" x-collapse>
+                                <p>Sustainability is at our core. We offer a range of recyclable and biodegradable material options, including PLA, PETG, and post-consumer resins. Our team can help you select the right eco-friendly material without compromising performance.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="capability-card-large" x-data="{ open: false }">
+                        <img src="images/12.jpg" alt="OEM parts packaged for fulfillment">
+                        <div class="capability-content">
+                            <div class="capability-visible" @click="open = !open">
+                                <div>
+                                    <i class="fas fa-box-tissue capability-icon"></i>
+                                    <h3>OEM Fulfillment</h3>
+                                </div>
+                                <i class="fas fa-chevron-down toggle-arrow" :class="{ 'rotate-180': open }"></i>
+                            </div>
+                            <div class="capability-hidden" x-show="open" x-collapse>
+                                <p>We operate as a seamless extension of your team. From production to packaging and logistics, our OEM fulfillment services ensure your components are manufactured, assembled, and delivered on-spec and on-time, directly to your production line or end-users.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer-section">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h4>MAYO PLASTICS</h4>
+                    <p>Precision Plastic Solutions, Made in Florida.</p>
+                    <p>232 Southeast Indus Cir S B, Mayo, FL 32066</p>
+                </div>
+                <div class="footer-links">
+                     <h4>Links</h4>
+                     <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="capabilities.html">Capabilities</a></li>
+                        <li><a href="industries.html">Industries</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                     </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <a href="mailto:contact@mayoplasticsmfg.com">contact@mayoplasticsmfg.com</a>
+                    <div class="social-icons">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Mayo Plastics Manufacturing Inc. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
